@@ -15,6 +15,13 @@ services:
     environment:
       TZ: 'America/Chicago'
       # WEBPASSWORD: 'set a secure password here or it will be random'
+      #Uncomment the DNS servers below that you would like to use. 
+      #Google DNS
+      #-PIHOLE_DNS_=8.8.8.8;8.8.4.4
+      #OPENDNS
+      #-PIHOLE_DNS_=208.67.222.222;208.67.220.220
+      #Cloudflare
+      #-PIHOLE_DNS_=1.1.1.1
     # Volumes store your data between container upgrades
     volumes:
       - './etc-pihole:/etc/pihole'
